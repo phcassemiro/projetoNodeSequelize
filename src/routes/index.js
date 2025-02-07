@@ -1,6 +1,6 @@
 const express = require('express');
-const pessoas = require('./pessoasRoute');
+const pessoas = require('./pessoasRoute.js');
 
-module.export = app => {
+module.exports = app => {
   app.use(express.json(),pessoas,);
 };
