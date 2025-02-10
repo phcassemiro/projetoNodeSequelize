@@ -17,6 +17,16 @@ class Services{
   //   return dataSource[this.model].create(dadosRegistro);
   // }
 
+  async atualizaRegistro(dadosAtualizados, id) {
+    const listadeRegistrosAtualizados = dataSource[this.model].update(dadosAtualizados, {
+      where: { id: id }
+    });
+    if (listadeRegistrosAtualizados[0] === 0) {
+      return false;
+    }
+    return true;
+  }
+
   // async excluiRegistro(id){
   //   return dataSource[this.model].destroy({where: {id: id}});
   // }
