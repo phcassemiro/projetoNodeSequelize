@@ -1,10 +1,12 @@
-class PessoaController{
-  static async pegatodas(req,res){
-    try {
-      //acesa o modelo
-    } catch (error) {
-      // erro
-    }
+const Controller = require('./Controller.js');
+const PessoaServices = require('../services/PessoaService.js');
+
+
+const pessoaServices = new PessoaServices();
+class PessoaController extends Controller{
+
+  constructor(){
+    super(pessoaServices);
   }
 }
 
